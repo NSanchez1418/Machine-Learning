@@ -23,3 +23,7 @@ _site/
 # Variables de entorno (si usas)
 .env
 *.env
+
+# Ignorar carpetas generadas por Quarto
+index_files/
+*.html
