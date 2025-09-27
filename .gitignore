@@ -1,1 +1,25 @@
-/.venv
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Cachés de Python
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+
+# Configuración del editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archivos y carpetas generados por Quarto
+*_files/
+index_files/
+_site/
+*.log
+
+# Variables de entorno (si usas)
+.env
+*.env
