@@ -1,0 +1,43 @@
+---
+title: "PRIMER REPORTE EN QUARTO"
+author: "Noe Sanchez"
+date: "25-09-2025"
+format: 
+    html:
+        embeb-resources: true
+
+---
+
+# titulo 1
+
+## subtitulo 2
+
+```{python} 
+import altair as alt
+from vega_datasets import data
+cars = data.cars()
+print(cars.head())
+```
+
+## Visualización en Altair
+
+### Visualización scatterplot con color 
+
+```{python}
+
+alt.Chart(cars).mark_point(filled=True).encode(
+    x="Miles_per_Gallon",
+    y="Horsepower",
+    color="Origin",
+    tooltip=["Name", "Origin", "Miles_per_Gallon", 
+    "Horsepower"]
+).interactive()
+
+
+```
+
+### subtitulo 3
+
+- lista
+    - elemento 1
+    - elemento 2
