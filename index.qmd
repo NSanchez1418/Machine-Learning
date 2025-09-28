@@ -23,18 +23,32 @@ print(cars.head())
 
 ### Visualización en Altair
 
+## Visualización scatterplot
+
+## Visualización scatterplot
+
 ```{python}
+#| echo: false
+import altair as alt
+from vega_datasets import data
 
-alt.Chart(cars).mark_point().encode(
-    x="Miles_per_Gallon",
-    y="Horsepower",
-    color="Name",
-    tooltip=["Name", "Origin", "Miles_per_Gallon", 
-    "Horsepower"]
-).interactive()
+cars = data.cars()
+alt.data_transformers.disable_max_rows()
 
-#interactive: zoom, brush
+# Deja el objeto del gráfico como ÚLTIMA expresión (sin asignarlo a variable)
+(
+    alt.Chart(cars)
+      .mark_point()
+      .encode(
+          x="Miles_per_Gallon",
+          y="Horsepower",
+          tooltip=["Name","Origin","Miles_per_Gallon","Horsepower"]
+      )
+      .interactive()
+)
 ```
+
+
 
  ## Subtitulo 3
  

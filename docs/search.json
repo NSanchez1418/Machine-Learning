@@ -74,6 +74,20 @@
     "href": "index.html",
     "title": "PRIMER REPORTE EN QUARTO",
     "section": "",
-    "text": "# Titulo 1\n## Subtitulo 2\n## Importar al dataset\n\nimport altair as alt\nfrom vega_datasets import data\ncars = data.cars()\nprint(cars.head())\n\n                        Name  Miles_per_Gallon  Cylinders  Displacement  \\\n0  chevrolet chevelle malibu              18.0          8         307.0   \n1          buick skylark 320              15.0          8         350.0   \n2         plymouth satellite              18.0          8         318.0   \n3              amc rebel sst              16.0          8         304.0   \n4                ford torino              17.0          8         302.0   \n\n   Horsepower  Weight_in_lbs  Acceleration       Year Origin  \n0       130.0           3504          12.0 1970-01-01    USA  \n1       165.0           3693          11.5 1970-01-01    USA  \n2       150.0           3436          11.0 1970-01-01    USA  \n3       150.0           3433          12.0 1970-01-01    USA  \n4       140.0           3449          10.5 1970-01-01    USA  \n\n\n\nVisualización en Altair\n\nchart=(alt.Chart(cars).mark_point().encode(\n    x=\"Miles_per_Gallon\",\n    y=\"Horsepower\",\n    tooltip=[\"Name\", \"Origin\", \"Miles_per_Gallon\", \n    \"Horsepower\"]\n).interactive()\n)\n#interactive: zoom, brush\n\n## Subtitulo 3\n\nlista\n\nelemento 1\nelemento 2"
+    "text": "# Titulo 1\n## Subtitulo 2\n## Importar al dataset\nimport altair as alt\nfrom vega_datasets import data\ncars = data.cars()\nprint(cars.head())\n\n                        Name  Miles_per_Gallon  Cylinders  Displacement  \\\n0  chevrolet chevelle malibu              18.0          8         307.0   \n1          buick skylark 320              15.0          8         350.0   \n2         plymouth satellite              18.0          8         318.0   \n3              amc rebel sst              16.0          8         304.0   \n4                ford torino              17.0          8         302.0   \n\n   Horsepower  Weight_in_lbs  Acceleration       Year Origin  \n0       130.0           3504          12.0 1970-01-01    USA  \n1       165.0           3693          11.5 1970-01-01    USA  \n2       150.0           3436          11.0 1970-01-01    USA  \n3       150.0           3433          12.0 1970-01-01    USA  \n4       140.0           3449          10.5 1970-01-01    USA"
+  },
+  {
+    "objectID": "index.html#visualización-scatterplot",
+    "href": "index.html#visualización-scatterplot",
+    "title": "PRIMER REPORTE EN QUARTO",
+    "section": "Visualización scatterplot",
+    "text": "Visualización scatterplot"
+  },
+  {
+    "objectID": "index.html#visualización-scatterplot-1",
+    "href": "index.html#visualización-scatterplot-1",
+    "title": "PRIMER REPORTE EN QUARTO",
+    "section": "Visualización scatterplot",
+    "text": "Visualización scatterplot\n\n\n\n\n\n\n\n\n## Subtitulo 3\n\nlista\n\nelemento 1\nelemento 2"
   }
 ]
