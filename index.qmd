@@ -1,43 +1,43 @@
 ---
 title: "PRIMER REPORTE EN QUARTO"
-author: "Noe Sanchez"
-date: "25-09-2025"
+author: "NOE SANCHEZ"
+date: 2025-09-25
 format: 
     html:
-        embeb-resources: true
+        embed-resources: true
 
 ---
 
-# titulo 1
+ # Titulo 1
 
-## subtitulo 2
+ ## Subtitulo 2
 
-```{python} 
+ ## Importar al dataset
+
+```{python}
 import altair as alt
 from vega_datasets import data
 cars = data.cars()
 print(cars.head())
 ```
 
-## Visualización en Altair
-
-### Visualización scatterplot con color 
+### Visualización en Altair
 
 ```{python}
 
-alt.Chart(cars).mark_point(filled=True).encode(
+alt.Chart(cars).mark_point().encode(
     x="Miles_per_Gallon",
     y="Horsepower",
-    color="Origin",
+    color="Name",
     tooltip=["Name", "Origin", "Miles_per_Gallon", 
     "Horsepower"]
 ).interactive()
 
-
+#interactive: zoom, brush
 ```
 
-### subtitulo 3
-
-- lista
+ ## Subtitulo 3
+ 
+ - lista
     - elemento 1
     - elemento 2

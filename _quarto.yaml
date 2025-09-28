@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - eda.qmd
+
+website:
+  title: "Mi Proyecto ML"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: eda.qmd
+        text: EDA
+
+format:
+  html:
+    theme: cosmo
+    toc: true
